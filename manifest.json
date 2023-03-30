@@ -1,0 +1,40 @@
+{
+    "name": "Kasu-Chan",
+    "description": "Style ugly websites",
+
+    "version": "1.0",
+    "manifest_version": 3,
+
+    "web_accessible_resources": [
+        {
+            "resources": [ "Compiler.js", "FS.js" ],
+            "matches": [ "<all_urls>" ]
+        }
+    ],
+
+    "content_scripts": [
+        {
+            "matches"   : [ "https://konachan.com/post?*" ],
+            "js"        : [ "./Konachan/posts/posts.js" ],
+            "css"       : [ "./Konachan/posts/posts.css" ]
+        },
+        {
+            "matches"   : [ "https://konachan.com/post/show/*" ],
+            "js"        : [ "./Konachan/post/post.js" ],
+            "css"       : [ "./Konachan/post/post.css" ]
+        }
+    ],
+
+    "permissions": [
+        "storage",
+        "tabs"
+    ],
+
+    "icons": {
+        "16": "./icon.png",
+        "48": "./icon.png",
+        "128": "./icon.png"
+    },
+
+    "action": {}
+}

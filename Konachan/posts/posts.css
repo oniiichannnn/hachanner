@@ -1,0 +1,15 @@
+ul#post-list-posts li {
+    width: 50%;
+}
+
+ul#post-list-posts .inner {
+    width: inherit;
+}
+
+img.preview {
+    width: auto;
+    height: auto;
+
+    max-width: 100%;
+    max-height: 100%;
+}
